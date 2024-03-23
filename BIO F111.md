@@ -47,19 +47,19 @@
     <td>Genetic Regulation and Cloning</td>
   </tr>
   <tr>
-    <td><p align='center'>1</p></td>
+    <td><p align='center'>10</p></td>
     <td>DNA Manipulation and Technology</td>
   </tr>
   <tr>
-    <td><p align='center'>2</p></td>
+    <td><p align='center'>11</p></td>
     <td>Animal Structure and Function</td>
   </tr>
   <tr>
-    <td><p align='center'>3</p></td>
+    <td><p align='center'>12</p></td>
     <td>The Body's Defenses</td>
   </tr>
   <tr>
-    <td><p align='center'>4</p></td>
+    <td><p align='center'>13</p></td>
     <td>Hormonal Control in Humans</td>
   </tr>
 </table>
