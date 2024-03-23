@@ -1,6 +1,6 @@
 # BIOT F212: Microbiology
 ### Overview
-<p align = 'justified'> The course deals with microbial structure, physiology, and genetics. The course also focuses on growth of
+<p align = 'justify'> The course deals with microbial structure, physiology, and genetics. The course also focuses on growth of
 different microorgnanisms and their control. Emphasis will be on role of microorganisms in human health, environment, and industry. </p>
 
 ### Handout
