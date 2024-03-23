@@ -1,6 +1,6 @@
 # BIO F111: General Biology
 ### Overview
-<p align = 'justified'> The course is aimed to provide a broad introduction to the major principles and topics in biology. The relationship of the living organism with its environment
+<p align = 'justify'> The course is aimed to provide a broad introduction to the major principles and topics in biology. The relationship of the living organism with its environment
   at the molecular level is highlighted in line with modern research in biological sciences. By the end of the course, the student would have gained an overall understanding
   of the core biological principles and wide-ranging applications of biology in industry, medicine, and human health. </p>
 
