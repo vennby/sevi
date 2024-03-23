@@ -1,6 +1,6 @@
 # BIOT F213: Cell Biology
 ### Overview
-<p align = 'justified'> The course will impart the knowledge of cell and mechanisms of cell functioning. It will also provide the base to understand cells at microscopic and molecular levels– their physiological properties, structure, intracellular organelles, interactions with microenvironments, division, regulatory mechanisms and related hands-on experimental procedures to prepare students for pursuing their enquiry into the fundamentals of life. </p>
+<p align = 'justify'> The course will impart the knowledge of cell and mechanisms of cell functioning. It will also provide the base to understand cells at microscopic and molecular levels– their physiological properties, structure, intracellular organelles, interactions with microenvironments, division, regulatory mechanisms and related hands-on experimental procedures to prepare students for pursuing their enquiry into the fundamentals of life. </p>
 
 ### Handout
 <table>
