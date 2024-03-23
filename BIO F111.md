@@ -10,6 +10,7 @@
     <th>Module</th>
     <th>Title</th>
     <th>Recommended Videos</th>
+    <th>Recommended Resources</th>
   </tr>
   <tr>
     <td><p align='center'>1</p></td>
@@ -65,6 +66,6 @@
   </tr>
 </table>
 
-<br>
+### Textbook
 
 <p align="right"><a href='BIOT F211.md'>Next >></a></p>
