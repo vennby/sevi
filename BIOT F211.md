@@ -8,6 +8,7 @@ macromolecules, energy yielding and energy requiring processes, genetic informat
   <tr>
     <th>Module</th>
     <th>Title</th>
+    <th>Recommended Videos</th>
   </tr>
   <tr>
     <td><p align='center'>1</p></td>
