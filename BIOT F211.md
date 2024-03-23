@@ -9,6 +9,7 @@ macromolecules, energy yielding and energy requiring processes, genetic informat
     <th>Module</th>
     <th>Title</th>
     <th>Recommended Videos</th>
+    <th>Recommended Resources</th>
   </tr>
   <tr>
     <td><p align='center'>1</p></td>
@@ -60,6 +61,6 @@ macromolecules, energy yielding and energy requiring processes, genetic informat
   </tr>
 </table>
 
-<br>
+### Textbook
 
 <p align="right"><a href="https://github.com/vennby/BioLib/blob/main/HTML/Module%201.md">Next >></a></p>
