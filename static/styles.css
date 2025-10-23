@@ -1,0 +1,52 @@
+:root {
+    --bg-color: #0b0b0b;
+    --land-color: #2a2a2a;
+    --hover-color: #ffffff;
+    --tooltip-bg: rgba(255, 255, 255, 0.1);
+    --tooltip-text: #fff;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg-color);
+    color: var(--tooltip-text);
+    font-family: "Inter", sans-serif;
+    overflow: hidden;
+  }
+
+  #hero {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .country {
+    fill: var(--land-color);
+    stroke: #555;
+    stroke-width: 0.5px;
+    transition: fill 0.3s, stroke 0.3s;
+  }
+
+  .country:hover {
+    fill: var(--hover-color);
+    stroke: #fff;
+    cursor: pointer;
+    filter: drop-shadow(0 0 6px white);
+  }
+
+  .tooltip {
+    position: absolute;
+    padding: 8px 12px;
+    background: var(--tooltip-bg);
+    border-radius: 8px;
+    pointer-events: none;
+    font-size: 14px;
+    backdrop-filter: blur(6px);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
