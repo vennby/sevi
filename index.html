@@ -2,23 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SEVI</title>
-  <!-- Link to external CSS file -->
+  <link rel="icon" href="static/assets/white-logo.svg">
   <link rel="stylesheet" href="static/styles.css">
-  <link rel="icon" href="static/assets/logo.png">
 </head>
 <body>
-  <!-- Hero section containing the map and tooltip -->
+
+  <!-- Header -->
+  <div class="header">
+    <img src="static/assets/white-logo.svg" alt="Logo">
+    <div class="text">
+      <h1>SEVI</h1>
+      <h3>Socio-Economic Vulnerability Index</h3>
+    </div>
+  </div>
+
+  <!-- Hero section with map -->
   <section id="hero">
-    <!-- Tooltip for displaying SEVI scores -->
     <div id="tooltip" class="tooltip"></div>
   </section>
 
-  <!-- Include D3.js and TopoJSON libraries -->
+  <!-- D3.js and TopoJSON -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="https://unpkg.com/topojson-client@3"></script>
-  <!-- Link to external JavaScript file -->
   <script src="static/script.js"></script>
 </body>
 </html>

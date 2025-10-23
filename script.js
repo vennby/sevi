@@ -1,60 +1,46 @@
-// Set up the dimensions for the SVG map
 const width = window.innerWidth;
 const height = window.innerHeight;
 
-// Append an SVG element to the #hero section
 const svg = d3.select("#hero").append("svg")
-  .attr("viewBox", [0, 0, width, height]);
+  .attr("width", width)
+  .attr("height", height);
 
-// Define the map projection
-const projection = d3.geoNaturalEarth1()
-  .scale(width / 6.3) // Scale the map to fit the screen
-  .translate([width / 2, height / 2]); // Center the map
+const projection = d3.geoMercator()
+  .center([78.9629, 22.5937]) // India center
+  .scale(width * 1.5)
+  .translate([width / 2, height / 2]);
 
-// Create a path generator using the projection
 const path = d3.geoPath(projection);
 
-// Select the tooltip element
 const tooltip = d3.select("#tooltip");
 
-// Example SEVI scores for countries
+// Example SEVI scores for Indian states
 const seviData = {
-  "India": 0.72,
-  "United States of America": 0.38,
-  "Brazil": 0.55,
-  "China": 0.41,
-  "Nigeria": 0.79,
-  "Australia": 0.29
+  "Maharashtra": 0.65,
+  "Karnataka": 0.58,
+  "Delhi": 0.72,
+  "Tamil Nadu": 0.49,
+  "Uttar Pradesh": 0.79,
+  "West Bengal": 0.68
+  // Add more states as needed
 };
 
-// Load the world map data
-// Using TopoJSON to render country shapes
-// Source: World Atlas dataset
-// Countries are rendered as paths
-// Tooltip shows SEVI score on hover
-
-d3.json("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json").then(world => {
-  const countries = topojson.feature(world, world.objects.countries).features;
-
-  svg.selectAll(".country")
-    .data(countries)
+// Load India GeoJSON
+d3.json("https://raw.githubusercontent.com/udit-001/india-maps-data/main/india.geojson").then(india => {
+  svg.selectAll(".state")
+    .data(india.features)
     .join("path")
-    .attr("class", "country")
+    .attr("class", "state")
     .attr("d", path)
     .on("mousemove", (event, d) => {
       const [x, y] = d3.pointer(event);
-      const countryName = d.properties.name || "Unknown";
-      const score = seviData[countryName];
+      const stateName = d.properties.NAME_1;
+      const score = seviData[stateName];
       tooltip
         .style("left", (x + 20) + "px")
         .style("top", (y + 20) + "px")
         .style("opacity", 1)
-        .html(`
-          <strong>${countryName}</strong><br>
-          SEVI Score: ${score !== undefined ? score : "N/A"}
-        `);
+        .html(`<strong>${stateName}</strong><br>SEVI Score: ${score !== undefined ? score : "N/A"}`);
     })
-    .on("mouseout", () => {
-      tooltip.style("opacity", 0);
-    });
+    .on("mouseout", () => tooltip.style("opacity", 0));
 });
