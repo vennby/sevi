@@ -8,24 +8,32 @@
   <link rel="stylesheet" href="static/styles.css">
 </head>
 <body>
-
-  <!-- Header -->
-  <div class="header">
-    <img src="static/assets/white-logo.svg" alt="Logo">
-    <div class="text">
-      <h1>SEVI</h1>
-      <h3>Socio-Economic Vulnerability Index</h3>
+  <div class="main-container">
+    <header class="navbar">
+      <div class="logo-container">
+        <img src="static/assets/white-logo.svg" alt="Logo" class="logo-image" href="/">
+          <div class="header-container">
+            <h1>SEVI</h1>
+            <h4>Socio-Economic Vulnerability Index</h4>
+          </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+      </nav>
+    </header>
     </div>
-  </div>
-
-  <!-- Hero section with map -->
-  <section id="hero">
-    <div id="tooltip" class="tooltip"></div>
-  </section>
-
-  <!-- D3.js and TopoJSON -->
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="https://unpkg.com/topojson-client@3"></script>
-  <script src="static/script.js"></script>
+      <!-- Hero section with map -->
+      <section id="hero">
+      <div id="map"></div>
+      <div id="tooltip" class="tooltip"></div>
+      </section>
+      </div>
+      <!-- D3.js and TopoJSON -->
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <script src="https://unpkg.com/topojson-client@3"></script>
+      <script src="static/script.js"></script>
 </body>
 </html>
