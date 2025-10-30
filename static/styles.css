@@ -1,8 +1,9 @@
 :root {
   --bg-color: #0b0b0b;
   --land-color: #2a2a2a;
+  --nav-bg: #2a2a2ab5;
   --hover-color: #ffffff7b;
-  --tooltip-bg: rgba(18, 18, 18, 0.1);
+  --tooltip-bg: #12121240;
   --tooltip-text: #fff;
 }
 
@@ -12,13 +13,16 @@ body {
   background: var(--bg-color);
   color: var(--tooltip-text);
   font-family: "Segoe UI";
+  /* !NOTE: Jugaad Fix for overflow */
+  overflow-x: hidden;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--land-color);
+  background-color: var(--nav-bg);
+  backdrop-filter: blur(5px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: fit-content;
   width: 100%;
@@ -59,7 +63,7 @@ body {
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   padding: 5px 20px;
 }
 
@@ -76,20 +80,44 @@ body {
 }
 
 #hero {
-  position: relative;
   width: 100%;
-  height: 600px;
-  margin-top: 150px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  overflow-x: hidden;
+  margin: 0;
+
 }
 
-svg {
+#map {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
+  height: fit-content;
+  border-radius: 12px;
+}
+
+/* !NOTE: Update this with a proper sizing logic in ./static/script.js */
+/* MARK: TO FIX */
+@media (max-width: 1500px) {
+  #hero {
+    margin: -15% 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  #hero {
+    margin: -20% 0;
+  }
+
+}
+
+@media (max-width: 600px) {
+  #hero {
+    margin: -25% 0;
+  }
 }
 
 .state {
@@ -116,42 +144,5 @@ svg {
   backdrop-filter: blur(6px);
   opacity: 0;
   transition: opacity 0.2s ease;
-}
-
-/* Header styling */
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 10;
-  padding: 20px;
-}
-
-.header img {
-  width: 120px;
-  height: auto;
-}
-
-.header .text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 0;
-  margin-left: 20px;
-}
-
-.header h1 {
-  color: white;
-  font-family: "Segoe UI", sans-serif;
-  margin: 0;
-  font-size: 2.5rem;
-  margin-bottom: 5px;
-}
-
-.header h3 {
-  color: white;
-  font-family: "Segoe UI", sans-serif;
-  margin: 5px 0 0 0;
-  font-size: 1.2rem;
-  margin-top: 0;
+  overflow-x: hidden;
 }
